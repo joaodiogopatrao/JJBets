@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>[[${title}]]</title>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+	rel="stylesheet">
+<link
+	 href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@900&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+
+<script src="js/pixi.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/PixiPlugin.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+</head>
+<body>
+<div class="header">
+		<a class="logocontainer"  href= "/home">
+		<img class ="logo" src="images/interfaceimages/JJBets.png" alt="">
+		</a>
+		<div class="logoheader">
+			<img class="profile" src="images/interfaceimages/profile.png" alt="">
+			<img class="plussign" src="images/interfaceimages/addsign.png" alt="">
+			<img class="gear" src="images/interfaceimages/gear.png" alt="">
+			<div class="wallet"></div>
+			<img class="plussign" src="images/interfaceimages/addsign.png" alt="">
+
+			<div class="sobreheader">
+				<b class="sobreText">SOBRE</b>
+				<div class="hovereffect1"></div>
+			</div>
+			<div class="ajudaheader">
+				<b class="ajudaText">AJUDA</b>
+				<div class="hovereffect2"></div>
+			</div>
+			<div class="objetivoheader">
+				<b class="objetivoText">CONTEXTO</b>
+				<div class="hovereffect3"></div>
+			</div>
+			<a href= "/registo" class="registoheader">
+				<b class="registoText">REGISTO</b>
+				<div class="hovereffect5"></div>
+			</a>
+		
+			
+			</div>
+</div>
+<div th:if="${param.error}" id ="loginerror" ><b>Username ou password inválida</b></div>
+<div class = "logincontainer">
+	<div id = "logincontainerheader">
+		<b class="loginText1">LOGIN</b>
+	</div>
+
+	<form id = "formcontainer" th:action ="@{/login}" method = "post">
+	<div id ="usernamecontainer">
+		<div id="usernametextcontainer">
+		<b class="usernameText">USERNAME</b>
+		</div>
+		<input type ="text" id="username" name = "username">
+	</div>
+	<div id ="passwordcontainer">
+		<div id="passwordtextcontainer">
+		<b class="passwordText">PASSWORD</b>
+		</div>
+		<input type ="password" id="password" name = "password">
+		
+	</div>
+		<div id ="registercontainer">
+			<b id= "registersuggestion">Ainda não tem conta?</b>
+			<a href = "/registo" id="registerhyperlink"> Clique aqui</a>
+		</div>
+		<input type ="submit" id="inputsubmit" value= "ENTRAR">
+	</div>
+	
+	</form>
+</div>
+
+
+</body>
+
+</html>

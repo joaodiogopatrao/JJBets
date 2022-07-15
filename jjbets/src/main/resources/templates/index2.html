@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>[[${title}]]</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+	rel="stylesheet">
+<link
+	 href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@900&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+	rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+
+<script src="js/pixi.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/PixiPlugin.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="header">
+		<a class="logocontainer"  href= "/home" id="testlogo">
+		<img class ="logo" src="images/interfaceimages/JJBets.png" alt="">
+		</a>
+		<div class="logoheader">
+			<img class="profile" src="images/interfaceimages/profile.png" alt="">
+			<img class="plussign" src="images/interfaceimages/addsign.png" alt="">
+			<img class="gear" src="images/interfaceimages/gear.png" alt="">
+			<div class="wallet"></div>
+			<img class="plussign" src="images/interfaceimages/addsign.png" alt="">
+
+		
+			
+			<div class="sobreheader">
+				<b class="sobreText">SOBRE</b>
+				<div class="hovereffect1"></div>
+			</div>
+			<div class="ajudaheader">
+				<b class="ajudaText">AJUDA</b>
+				<div class="hovereffect2"></div>
+			</div>
+			<div class="objetivoheader">
+				<b class="objetivoText">CONTEXTO</b>
+				<div class="hovereffect3"></div>
+			</div>
+			<a href= "/login" class="registoheader">
+				<b class="registoText">LOGOUT</b>
+				<div class="hovereffect4"></div>
+			</a>
+		</div>
+	</div>
+	<div id ="welcomecontainer">
+			<b id= "welcomeText">Bem-vindo [[${#request.userPrincipal.principal.Name}]]!</b>
+			</div>
+	<div id="destaques">
+		<div id="destaquesheader">
+			<b class="textdestaques">Destaques ★</b> <b class="destaquesdate">Hoje</b>
+			<div id="textunderlinedestaques"></div>
+		</div>
+		<div id="destaquescontent">
+			<div id="firstdestaque">
+				<img class="destaqueimage"
+					src="images/interfaceimages/destaque1_.png" alt="">
+				<div id="firstodd1">
+					<b id="firstodd1text">1,34</b>
+					<div id="firstodd1ind">
+						<b id="firstodd1indtext">1</b>
+					</div>
+				</div>
+				<div id="firstodd2">
+					<b id="firstodd2text">5,10</b>
+					<div id="firstodd2ind">
+						<b id="firstodd2indtext">X</b>
+					</div>
+				</div>
+				<div id="firstodd3">
+					<b id="firstodd3text">8,45</b>
+					<div id="firstodd3ind">
+						<b id="firstodd3indtext">2</b>
+					</div>
+				</div>
+			</div>
+			<div id="seconddestaque">
+				<img class="destaqueimage"
+					src="images/interfaceimages/destaque2_.png" alt="">
+				<div id="secondodd1">
+					<b id="secondodd1text">1,43</b>
+					<div id="secondodd1ind">
+						<b id="secondodd1indtext">1</b>
+					</div>
+				</div>
+				<div id="secondodd2">
+					<b id="secondodd2text">4,35</b>
+					<div id="secondodd2ind">
+						<b id="secondodd2indtext">X</b>
+					</div>
+				</div>
+				<div id="secondodd3">
+					<b id="secondodd3text">7,00</b>
+					<div id="secondodd3ind">
+						<b id="secondodd3indtext">2</b>
+					</div>
+				</div>
+			</div>
+			<div id="thirddestaque">
+				<img class="destaqueimage"
+					src="images/interfaceimages/destaque3_.png" alt="">
+				<div id="thirdodd1">
+					<b id="thirdodd1text">4,75</b>
+					<div id="thirdodd1ind">
+						<b id="thirdodd1indtext">1</b>
+					</div>
+				</div>
+				<div id="thirdodd2">
+					<b id="thirdodd2text">3,95</b>
+					<div id="thirdodd2ind">
+						<b id="thirdodd2indtext">X</b>
+					</div>
+				</div>
+				<div id="thirdodd3">
+					<b id="thirdodd3text">1,59</b>
+					<div id="thirdodd3ind">
+						<b id="thirdodd3indtext">2</b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="promocoesdiv">
+		<img class="promoimage" src="images/interfaceimages/50bonus.jpg"
+			alt="">
+		<div class="promotion"></div>
+		<img class="rightarrowpromo" src="images/interfaceimages/rightarrow.png" alt=""> 
+			<img class="leftarrowpromo" src="images/interfaceimages/leftarrow.png" alt="">
+
+
+
+	</div>
+	<div id="content">
+		<div id="separation"></div>
+
+	</div>
+	<div id="boletim">
+		<div class="historicoheader">
+			<b class="texthistorico">Histórico ✐</b>
+			<div id="textunderlinehistorico"></div>
+		</div>
+
+	</div>
+
+</body>
+</html>
